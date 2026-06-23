@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Hexagon base -->
+  <polygon points="60,8 104,34 104,86 60,112 16,86 16,34"
+           fill="#0a0e27" stroke="#00d4ff" stroke-width="3"/>
+  <!-- Inner hexagon -->
+  <polygon points="60,24 90,42 90,78 60,96 30,78 30,42"
+           fill="#12163a" stroke="#0099bb" stroke-width="1.5"/>
+  <!-- Robot eyes -->
+  <circle cx="45" cy="52" r="6" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="75" cy="52" r="6" fill="#00d4ff" opacity="0.9"/>
+  <!-- Pupils -->
+  <circle cx="45" cy="52" r="2.5" fill="#fff"/>
+  <circle cx="75" cy="52" r="2.5" fill="#fff"/>
+  <!-- Mouth / sensor bar -->
+  <rect x="38" y="68" width="44" height="4" rx="2" fill="#00d4ff" opacity="0.7"/>
+  <!-- Antenna / gear indicator -->
+  <circle cx="60" cy="18" r="3" fill="#00d4ff"/>
+  <line x1="60" y1="21" x2="60" y2="27" stroke="#00d4ff" stroke-width="1.5"/>
+  <!-- Circuit traces -->
+  <line x1="16" y1="34" x2="30" y2="42" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="104" y1="34" x2="90" y2="42" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="16" y1="86" x2="30" y2="78" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="104" y1="86" x2="90" y2="78" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <!-- Dots on circuit traces -->
+  <circle cx="22" cy="38" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="98" cy="38" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="22" cy="82" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="98" cy="82" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <!-- Wi-Fi signal arcs -->
+  <path d="M52,82 Q60,90 68,82" stroke="#00d4ff" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M45,76 Q60,92 75,76" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.3"/>
+</svg>

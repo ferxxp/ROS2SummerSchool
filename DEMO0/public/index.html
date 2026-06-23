@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iRoboCity2030 Summer School 2026</title>
+</head>
+<body>
+
+<h1>Welcome to the iRoboCity2030 Summer School 2026</h1>
+<p>ROS 2 &middot; AI &middot; Field Robotics</p>
+<p><a href="/about">About</a></p>
+
+<h2>POST to /echo</h2>
+<p>Send a message and see the raw HTTP response.</p>
+
+<form action="/echo" method="POST">
+  <input type="text" name="message" placeholder="Type a message..." required>
+  <button type="submit">Send</button>
+</form>
+
+<pre id="result"></pre>
+
+<script>
+document.querySelector('form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const input = document.querySelector('[name="message"]');
+  const res = await fetch('/echo', { method: 'POST', body: new URLSearchParams({message: input.value}) });
+  document.getElementById('result').textContent = 'Server says: ' + await res.text();
+});
+</script>
+
+<hr>
+<small>&copy; 2026 iRoboCity2030 &mdash; Summer School on ROS 2, AI and Field Robotics</small>
+
+</body>
+</html>
