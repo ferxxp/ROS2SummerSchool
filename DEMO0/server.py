@@ -191,10 +191,10 @@ def main():
     server.bind((HOST, PORT))
     server.listen(128)
 
-    print(f"[i] iRoboCity2030 HTTP Server")
-    print(f"[i] Listening on http://{HOST}:{PORT}")
-    print(f"[i] Serving files from: {PUBLIC_DIR}")
-    print(f"[i] Press Ctrl+C to stop.\n")
+    print(f"[i] iRoboCity2030 HTTP Server", flush=True)
+    print(f"[i] Listening on http://{HOST}:{PORT}", flush=True)
+    print(f"[i] Serving files from: {PUBLIC_DIR}", flush=True)
+    print(f"[i] Press Ctrl+C to stop.\n", flush=True)
 
     pool = ThreadPoolExecutor(max_workers=MAX_WORKERS)
 
