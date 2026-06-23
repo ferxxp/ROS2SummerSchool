@@ -1,0 +1,32 @@
+services:
+  node1:
+    build: .
+    container_name: node1
+    restart: no
+    network_mode: bridge 
+    environment:
+      - ROS_DOMAIN_ID=9
+    volumes:
+      - ./ros2_ws/src:/ros2_ws/src
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  node2:
+    build: .
+    container_name: node2
+    restart: no
+    network_mode: bridge 
+    environment:
+      - ROS_DOMAIN_ID=9
+    command: /bin/bash -c "source /ros2_ws/install/setup.bash && exec /ros2_ws/install/ros2summerschool/lib/ros2summerschool/listener"
+
+  node3:
+    build: .
+    container_name: node3
+    restart: no
+    network_mode: bridge 
+    environment:
+      - ROS_DOMAIN_ID=9
+    command: /bin/bash -c "source /ros2_ws/install/setup.bash && exec /ros2_ws/install/ros2summerschool/lib/ros2summerschool/talker"
+
